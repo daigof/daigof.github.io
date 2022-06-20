@@ -15,6 +15,9 @@ const Layout = () => (
           <Link to="/anagram">Anagram</Link>
         </li>
         <li>
+          <Link to="/tic-tac-toe">Tic Tac Toe</Link>
+        </li>
+        <li>
           <Link to="/no/match-page">404 page</Link>
         </li>
       </ul>
