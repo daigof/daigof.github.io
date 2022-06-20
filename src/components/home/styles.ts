@@ -1,9 +1,6 @@
 import styled from "@emotion/styled";
 
-export const MainContainer = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
-  background-color: pink;
+export const FlexContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -17,9 +14,9 @@ export const BoxContainer = styled.div`
   margin: 10px;
 
   &:hover {
-    cursor:pointer;
+    cursor: pointer;
 
-    &:first-of-type{
+    &:first-of-type {
       background: yellow;
     }
   }
