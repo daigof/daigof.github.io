@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Board from "./board";
+import "./styles.css";
 
 export type SquaresType = Array<string | null>;
 
@@ -54,20 +55,29 @@ const TicTacToe: React.FC = () => {
   }
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board
-          squares={squares}
-          onSquareClick={(squareIndexClicked: number) =>
-            handleClick(squareIndexClicked)
-          }
-        />
+    <>
+      <h1>Tic Tac Toe</h1>
+      <p>
+        <em>
+          taken from React tutorial. I converted it to TS and tweaked it a
+          little...
+        </em>
+      </p>
+      <div className="game">
+        <div className="game-board">
+          <Board
+            squares={squares}
+            onSquareClick={(squareIndexClicked: number) =>
+              handleClick(squareIndexClicked)
+            }
+          />
+        </div>
+        <div className="game-info">
+          <div>{status}</div>
+          <button onClick={resetBoard}>Reset Board</button>
+        </div>
       </div>
-      <div className="game-info">
-        <div>{status}</div>
-        <button onClick={resetBoard}>Reset Board</button>
-      </div>
-    </div>
+    </>
   );
 };
 export default TicTacToe;
