@@ -8,6 +8,7 @@ import Layout from "./components/layout";
 import NoMatch from "./components/noMatch";
 import Anagram from "./components/angram";
 import TicTacToe from "./components/ticTacToe";
+import Miscellaneous from "./components/miscellaneous";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,6 +22,7 @@ root.render(
           <Route index element={<Home />} />
           <Route path="anagram" element={<Anagram />} />
           <Route path="tic-tac-toe" element={<TicTacToe />} />
+          <Route path="misc" element={<Miscellaneous />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
