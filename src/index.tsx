@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/examples-2022-react-ts">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

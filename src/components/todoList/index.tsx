@@ -11,7 +11,9 @@ const TodoList = () => {
   const [todoText, setTodoText] = useState("");
   const [todos, setTodos] = useState<Array<TodoType>>([]);
 
-  const submitTodo = () => {
+  const submitTodo = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     if (!todoText) {
       alert("type something first");
       return;
@@ -32,11 +34,9 @@ const TodoList = () => {
   };
 
   const updateTodos = (text: string) => {
-    const updatedList = todos.map((todo) => ({
-      ...todo,
-      completed: todo.text === text ? !todo.completed : todo.completed,
-    }));
-
+    const updatedList = todos.map((todo) =>
+      todo.text === text ? { ...todo, completed: !todo.completed } : { ...todo }
+    );
     setTodos(updatedList);
   };
 
@@ -52,23 +52,35 @@ const TodoList = () => {
   return (
     <>
       <h1>Todo List</h1>
+
       <p>
         <em>click the todos items to mark them completed or uncompleted...</em>
+        <br />
+        <em>
+          code found here:{" "}
+          <a
+            href="https://github.com/daigof/examples-2022-react-ts"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://github.com/daigof/examples-2022-react-ts
+          </a>
+        </em>
       </p>
 
       <hr />
       <h3>Submit todo here...</h3>
-      <input
-        type="text"
-        placeholder="type a todo here"
-        value={todoText}
-        onChange={(e) => {
-          setTodoText(e.target.value);
-        }}
-      />
-      <button type="button" onClick={submitTodo}>
-        submit todo
-      </button>
+      <form onSubmit={submitTodo}>
+        <input
+          type="text"
+          placeholder="type a todo here"
+          value={todoText}
+          onChange={(e) => {
+            setTodoText(e.target.value);
+          }}
+        />
+        <button type="submit">submit todo</button>
+      </form>
       <hr />
       <h3>Todos</h3>
       <UnorderedList>{renderTodosListItems()}</UnorderedList>
