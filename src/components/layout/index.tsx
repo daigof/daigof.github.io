@@ -21,6 +21,9 @@ const Layout = () => (
           <Link to="/todo-list">Todo list</Link>
         </li>
         <li>
+          <Link to="/tasks-app">Tasks App</Link>
+        </li>
+        <li>
           <Link to="/misc">Miscellaneous</Link>
         </li>
         <li>

@@ -1,6 +1,6 @@
 import React from "react";
 import UseApiExample from "./useApiExample";
-// import UseMemoCallback from "./useMemoCallback";
+import UseLocalStorage from "./useLocalStorage";
 
 const Miscellaneous = () => {
   return (
@@ -11,7 +11,7 @@ const Miscellaneous = () => {
       <UseApiExample />
       <hr />
       <hr />
-      {/* <UseMemoCallback /> */}
+      <UseLocalStorage />
       <hr />
       <hr />
     </>
