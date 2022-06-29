@@ -1,12 +1,12 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import { MainWrapper } from "./styles";
+import { MainWrapper, NavBar } from "./styles";
 
 const Layout = () => (
   <div>
     {/* A "layout route" is a good place to put markup you want to
         share across all the pages on your site, like navigation. */}
-    <nav>
+    <NavBar>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -30,7 +30,7 @@ const Layout = () => (
           <Link to="/no/match-page">404 page</Link>
         </li>
       </ul>
-    </nav>
+    </NavBar>
 
     <hr />
 

@@ -1,4 +1,5 @@
 import React from "react";
+import DomainSplitter from "./domainSplitter";
 import UseApiExample from "./useApiExample";
 import UseLocalStorage from "./useLocalStorage";
 
@@ -12,6 +13,9 @@ const Miscellaneous = () => {
       <hr />
       <hr />
       <UseLocalStorage />
+      <hr />
+      <hr />
+      <DomainSplitter />
       <hr />
       <hr />
     </>
