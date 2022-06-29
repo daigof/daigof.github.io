@@ -11,6 +11,7 @@ import TicTacToe from "./components/ticTacToe";
 import Miscellaneous from "./components/miscellaneous";
 import TodoList from "./components/todoList";
 import TasksApp from "./components/tasksApp";
+import ListItemsSelector from "./components/listItemsSelector";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -27,6 +28,7 @@ root.render(
           <Route path="misc" element={<Miscellaneous />} />
           <Route path="todo-list" element={<TodoList />} />
           <Route path="tasks-app" element={<TasksApp />} />
+          <Route path="list-items" element={<ListItemsSelector />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
